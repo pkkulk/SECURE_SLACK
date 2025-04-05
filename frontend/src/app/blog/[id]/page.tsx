@@ -1,11 +1,11 @@
-// app/blog/[id]/page.tsx
 import { notFound } from "next/navigation";
+import { type Metadata } from "next";
 
-interface BlogDetailProps {
+interface PageProps {
   params: { id: string };
 }
 
-// Dummy blog data (in real app you’ll fetch this from DB or API)
+// Dummy blog data
 const blogs = [
   {
     id: "1",
@@ -23,16 +23,18 @@ const blogs = [
   },
 ];
 
-export default function BlogPostPage({ params }: BlogDetailProps) {
+export default function BlogPostPage({ params }: PageProps) {
   const blog = blogs.find((b) => b.id === params.id);
 
   if (!blog) {
-    notFound(); // shows 404 page if blog not found
+    notFound();
   }
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
-      <p className="text-sm text-gray-500">{blog.date} · {blog.category}</p>
+      <p className="text-sm text-gray-500">
+        {blog.date} · {blog.category}
+      </p>
       <h1 className="text-4xl font-bold mt-2">{blog.title}</h1>
       <div className="mt-6 text-lg text-gray-700 leading-relaxed">
         {blog.content}
