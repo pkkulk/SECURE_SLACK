@@ -1,9 +1,21 @@
-import Image from "next/image";
+import Hero from "./components/Home/Hero";
+import AboutSection from "./components/Home/AbooutSection";
+import ServiceCard from "./components/Home/ServiceCard";
+import ServiceOverview from "./components/Home/ServicesOverview";
+import SocialProof from "./components/Home/SocialProof";
 
-export default function Home() {
+export default function Page() {
   return (
-   <div>
-    <h1 className="text-red-500 text-5xl ">hello</h1>
+    <div className="flex flex-col min-h-screen">
+   
+      <main className="flex-grow p-6">
+        <h1 className="text-2xl font-bold text-green-700">Welcome to the Page!</h1>
+      <Hero/>
+      <AboutSection/>
+      <ServiceCard/>
+      <ServiceOverview/>
+      <SocialProof/>
+      </main>
     </div>
   );
 }
