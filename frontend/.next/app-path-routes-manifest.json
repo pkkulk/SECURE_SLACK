@@ -1,0 +1,11 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/components/News/page": "/components/News",
+  "/blog/page": "/blog",
+  "/components/Resources/page": "/components/Resources",
+  "/login/page": "/login",
+  "/page": "/",
+  "/signup/page": "/signup",
+  "/blog/[id]/page": "/blog/[id]"
+}
