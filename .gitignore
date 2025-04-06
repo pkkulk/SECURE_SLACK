@@ -15,3 +15,5 @@ build/
 # Env files
 .env
 *.env
+backend/config/google-credentials.json
+backend/utils/*.json
