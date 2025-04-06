@@ -1,0 +1,34 @@
+{
+    "name": "CyberSecurityServices",
+    "auto": true,
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "responses": [
+      {
+        "messages": [
+          {
+            "type": 0,
+            "lang": "en",
+            "speech": [
+              "We offer a range of cybersecurity services including:\n🔸 Vulnerability Assessment\n🔸 Penetration Testing\n🔸 Network Security\n🔸 Security Awareness Training\n🔸 Incident Response\nWould you like more details about any of these?"
+            ]
+          }
+        ]
+      }
+    ],
+    "userSays": [
+      { "data": [{ "text": "What services do you offer?" }], "isTemplate": false },
+      { "data": [{ "text": "Tell me about your services" }], "isTemplate": false },
+      { "data": [{ "text": "What can your company do?" }], "isTemplate": false },
+      { "data": [{ "text": "Cybersecurity services you offer?" }], "isTemplate": false },
+      { "data": [{ "text": "What solutions do you provide?" }], "isTemplate": false },
+      { "data": [{ "text": "List of services?" }], "isTemplate": false },
+      { "data": [{ "text": "Explain your services" }], "isTemplate": false },
+      { "data": [{ "text": "Tell me about cybersecurity solutions" }], "isTemplate": false },
+      { "data": [{ "text": "What are your offerings?" }], "isTemplate": false },
+      { "data": [{ "text": "What do you provide in security?" }], "isTemplate": false }
+    ]
+  }
+  

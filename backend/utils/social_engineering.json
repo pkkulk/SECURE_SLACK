@@ -1,0 +1,41 @@
+{
+    "name": "social_engineering",
+    "auto": true,
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "responses": [
+      {
+        "messages": [
+          {
+            "type": 0,
+            "lang": "en",
+            "speech": [
+              "Social engineering is the art of manipulating people so they give up confidential information.",
+              "Attackers exploit human psychology, rather than technical vulnerabilities, to gain access to systems or data.",
+              "Common social engineering tactics include phishing, pretexting, baiting, and tailgating.",
+              "Phishing involves deceptive emails or messages that trick users into revealing sensitive information.",
+              "Pretexting involves creating a fabricated scenario to convince a victim to divulge information.",
+              "Baiting involves offering something enticing (like a USB drive with malware) to lure victims.",
+              "Tailgating involves physically following an authorized person into a restricted area.",
+              "Spear phishing targets specific individuals or organizations with personalized attacks.",
+              "Awareness training is crucial to help individuals recognize and avoid social engineering attacks."
+            ]
+          }
+        ]
+      }
+    ],
+    "userSays": [
+      { "data": [{ "text": "what is social engineering?" }], "isTemplate": false },
+      { "data": [{ "text": "define social engineering" }], "isTemplate": false },
+      { "data": [{ "text": "types of social engineering attacks" }], "isTemplate": false },
+      { "data": [{ "text": "examples of social engineering" }], "isTemplate": false },
+      { "data": [{ "text": "how to prevent social engineering" }], "isTemplate": false },
+      { "data": [{ "text": "what is phishing?" }], "isTemplate": false },
+      { "data": [{ "text": "what is pretexting?" }], "isTemplate": false },
+      { "data": [{ "text": "what is baiting?" }], "isTemplate": false },
+      { "data": [{ "text": "what is tailgating?" }], "isTemplate": false },
+      { "data": [{ "text": "what is spear phishing?" }], "isTemplate": false }
+    ]
+  }

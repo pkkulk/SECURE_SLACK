@@ -1,0 +1,35 @@
+{
+    "name": "penetration_testing",
+    "auto": true,
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "responses": [
+      {
+        "messages": [
+          {
+            "type": 0,
+            "lang": "en",
+            "speech": [
+              "Penetration testing, also known as a pen test or ethical hacking, is a simulated cyber attack performed on a computer system, network, or application to evaluate its security.",
+              "The goal is to identify vulnerabilities that could be exploited by malicious actors.",
+              "Pen testers use the same tools and techniques as attackers to find weaknesses in a system's defenses.",
+              "This process helps organizations understand their security posture and identify areas for improvement before a real attack occurs.",
+              "A typical penetration test involves several phases: planning and reconnaissance, scanning, gaining access, maintaining access, and analysis and reporting."
+            ]
+          }
+        ]
+      }
+    ],
+    "userSays": [
+      { "data": [{ "text": "what is penetration testing?" }], "isTemplate": false },
+      { "data": [{ "text": "define penetration testing" }], "isTemplate": false },
+      { "data": [{ "text": "what is a pen test?" }], "isTemplate": false },
+      { "data": [{ "text": "how does penetration testing work?" }], "isTemplate": false },
+      { "data": [{ "text": "purpose of penetration testing" }], "isTemplate": false },
+      { "data": [{ "text": "phases of penetration testing" }], "isTemplate": false },
+      { "data": [{ "text": "who performs penetration testing?" }], "isTemplate": false },
+      { "data": [{ "text": "ethical hacking" }], "isTemplate": false }
+    ]
+  }

@@ -1,0 +1,53 @@
+{
+    "name": "Default Welcome Intent",
+    "auto": true,
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [
+      {
+        "name": "WELCOME"
+      }
+    ],
+    "responses": [
+      {
+        "messages": [
+          {
+            "type": 0,
+            "lang": "en",
+            "speech": [
+              "Hello! 👋 I'm your Cyber Security Assistant.",
+              "I can help answer your security questions, or tell you about our services. How can I help today?"
+            ]
+          }
+        ]
+      }
+    ],
+    "userSays": [
+      { "data": [{ "text": "hi" }], "isTemplate": false },
+      { "data": [{ "text": "hello" }], "isTemplate": false },
+      { "data": [{ "text": "hey" }], "isTemplate": false },
+      { "data": [{ "text": "good morning" }], "isTemplate": false },
+      { "data": [{ "text": "good afternoon" }], "isTemplate": false },
+      { "data": [{ "text": "good evening" }], "isTemplate": false },
+      { "data": [{ "text": "what's up" }], "isTemplate": false },
+      { "data": [{ "text": "yo" }], "isTemplate": false },
+      { "data": [{ "text": "hi there" }], "isTemplate": false },
+      { "data": [{ "text": "hello there" }], "isTemplate": false },
+      { "data": [{ "text": "hey bot" }], "isTemplate": false },
+      { "data": [{ "text": "hey assistant" }], "isTemplate": false },
+      { "data": [{ "text": "greetings" }], "isTemplate": false },
+      { "data": [{ "text": "bonjour" }], "isTemplate": false },
+      { "data": [{ "text": "namaste" }], "isTemplate": false },
+      { "data": [{ "text": "hola" }], "isTemplate": false },
+      { "data": [{ "text": "yo bot" }], "isTemplate": false },
+      { "data": [{ "text": "start chat" }], "isTemplate": false },
+      { "data": [{ "text": "begin" }], "isTemplate": false },
+      { "data": [{ "text": "can you help me?" }], "isTemplate": false },
+      { "data": [{ "text": "cyber help" }], "isTemplate": false },
+      { "data": [{ "text": "security assistant" }], "isTemplate": false },
+      { "data": [{ "text": "launch assistant" }], "isTemplate": false }
+    ]
+  }
+  

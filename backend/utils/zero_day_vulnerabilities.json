@@ -1,0 +1,35 @@
+{
+    "name": "zero_day_vulnerabilities",
+    "auto": true,
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "responses": [
+      {
+        "messages": [
+          {
+            "type": 0,
+            "lang": "en",
+            "speech": [
+              "A zero-day vulnerability is a software flaw that is unknown to the vendor and for which no patch exists.",
+              "This means that attackers can exploit the vulnerability before the developers are even aware of it.",
+              "Zero-day exploits can be very dangerous because there is no immediate defense against them.",
+              "Attackers often discover these vulnerabilities and use them in targeted attacks.",
+              "Mitigation strategies include using intrusion detection and prevention systems, keeping software updated (as soon as patches are released), and employing behavioral analysis tools.",
+              "The term 'zero-day' refers to the fact that the vendor has had zero days to fix the flaw since its discovery by attackers."
+            ]
+          }
+        ]
+      }
+    ],
+    "userSays": [
+      { "data": [{ "text": "what is a zero-day vulnerability?" }], "isTemplate": false },
+      { "data": [{ "text": "define zero-day vulnerability" }], "isTemplate": false },
+      { "data": [{ "text": "why are zero-day vulnerabilities dangerous?" }], "isTemplate": false },
+      { "data": [{ "text": "how are zero-day vulnerabilities exploited?" }], "isTemplate": false },
+      { "data": [{ "text": "how to protect against zero-day attacks?" }], "isTemplate": false },
+      { "data": [{ "text": "examples of zero-day exploits" }], "isTemplate": false },
+      { "data": [{ "text": "zero-day attack mitigation" }], "isTemplate": false }
+    ]
+  }

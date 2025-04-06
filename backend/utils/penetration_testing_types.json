@@ -1,0 +1,51 @@
+{
+  "name": "penetration_testing_types",
+  "auto": true,
+  "priority": 490000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "responses": [
+    {
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "There are several types of penetration testing, categorized by the scope of the test and the level of knowledge provided to the testers:",
+            "**Black Box Testing:** The tester has no prior knowledge of the target system, simulating an external attacker.",
+            "**White Box Testing:** The tester has full knowledge of the target system, including architecture, source code, and credentials. This allows for a more thorough analysis.",
+            "**Gray Box Testing:** The tester has partial knowledge of the target system, striking a balance between black box and white box testing.",
+            "**External Penetration Testing:** Focuses on externally facing infrastructure like websites, email servers, and DNS servers.",
+            "**Internal Penetration Testing:** Simulates an attack from within the organization's network, often to assess the risk from malicious insiders.",
+            "**Blind Testing:** The security team is aware the test is occurring but has limited information about the tester's activities.",
+            "**Double-Blind Testing:** Most of the security team is unaware of the test, providing a more realistic assessment of their response capabilities.",
+            "**Web Application Penetration Testing:** Specifically targets web applications to identify vulnerabilities in their code, logic, and infrastructure.",
+            "**Network Penetration Testing:** Assesses the security of network devices, servers, and overall network architecture.",
+            "**Wireless Penetration Testing:** Focuses on identifying weaknesses in Wi-Fi networks and wireless devices.",
+            "**Social Engineering Penetration Testing:** Evaluates the susceptibility of employees to manipulation tactics.",
+            "**Physical Penetration Testing:** Attempts to breach physical security controls like locks, cameras, and access control systems.",
+            "**Cloud Penetration Testing:** Specifically designed to assess the security of cloud-based environments and services.",
+            "**Mobile Application Penetration Testing:** Focuses on identifying vulnerabilities in mobile applications on platforms like Android and iOS."
+          ]
+        }
+      ]
+    }
+  ],
+  "userSays": [
+    { "data": [{ "text": "what are the types of penetration testing?" }], "isTemplate": false },
+    { "data": [{ "text": "different kinds of pen tests" }], "isTemplate": false },
+    { "data": [{ "text": "explain black box testing" }], "isTemplate": false },
+    { "data": [{ "text": "what is white box testing?" }], "isTemplate": false },
+    { "data": [{ "text": "gray box penetration test" }], "isTemplate": false },
+    { "data": [{ "text": "external vs internal pen test" }], "isTemplate": false },
+    { "data": [{ "text": "blind and double-blind testing" }], "isTemplate": false },
+    { "data": [{ "text": "web application pen testing" }], "isTemplate": false },
+    { "data": [{ "text": "network pen testing" }], "isTemplate": false },
+    { "data": [{ "text": "wireless penetration testing" }], "isTemplate": false },
+    { "data": [{ "text": "social engineering testing" }], "isTemplate": false },
+    { "data": [{ "text": "physical security testing" }], "isTemplate": false },
+    { "data": [{ "text": "cloud pen testing" }], "isTemplate": false },
+    { "data": [{ "text": "mobile app pen testing" }], "isTemplate": false }
+  ]
+}

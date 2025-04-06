@@ -1,0 +1,40 @@
+{
+    "name": "network_security",
+    "auto": true,
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "responses": [
+      {
+        "messages": [
+          {
+            "type": 0,
+            "lang": "en",
+            "speech": [
+              "Network security encompasses the policies and practices adopted to prevent and monitor unauthorized access, misuse, modification, or denial of a computer network and its network-accessible resources.",
+              "It involves a wide range of technologies, devices, and processes.",
+              "Key components of network security include firewalls, intrusion detection and prevention systems (IDS/IPS), VPNs, access control, and security information and event management (SIEM) systems.",
+              "Wireless security protocols like WPA3 help secure Wi-Fi networks.",
+              "Network segmentation divides a network into smaller, isolated segments to limit the impact of security breaches.",
+              "Regular security audits and vulnerability assessments are essential for maintaining network security.",
+              "Employee training on security best practices is also a crucial aspect of network security.",
+              "Endpoint security focuses on protecting individual devices connected to the network."
+            ]
+          }
+        ]
+      }
+    ],
+    "userSays": [
+      { "data": [{ "text": "what is network security?" }], "isTemplate": false },
+      { "data": [{ "text": "define network security" }], "isTemplate": false },
+      { "data": [{ "text": "importance of network security" }], "isTemplate": false },
+      { "data": [{ "text": "network security components" }], "isTemplate": false },
+      { "data": [{ "text": "how to improve network security" }], "isTemplate": false },
+      { "data": [{ "text": "network security best practices" }], "isTemplate": false },
+      { "data": [{ "text": "what is IDS/IPS?" }], "isTemplate": false },
+      { "data": [{ "text": "what is a VPN?" }], "isTemplate": false },
+      { "data": [{ "text": "what is network segmentation?" }], "isTemplate": false },
+      { "data": [{ "text": "what is endpoint security?" }], "isTemplate": false }
+    ]
+  }

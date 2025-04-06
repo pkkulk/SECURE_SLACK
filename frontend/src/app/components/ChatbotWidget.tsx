@@ -10,22 +10,37 @@ const ChatbotWidget = () => {
   const [isTyping, setIsTyping] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (input.trim() === '') return;
-
-    setMessages((prev) => [...prev, { from: 'user', text: input }]);
+  
+    const userMsg = { from: 'user', text: input };
+    setMessages((prev) => [...prev, userMsg]);
     setInput('');
     setIsTyping(true);
-
-    setTimeout(() => {
-      setIsTyping(false);
+  
+    try {
+      const res = await fetch('http://localhost:5000/api/chat/chatbotReply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: input }),
+      });
+  
+      const data = await res.json();
+  
       setMessages((prev) => [
         ...prev,
-        { from: 'bot', text: 'Thanks for reaching out. We’ll get back to you shortly!' }
+        { from: 'bot', text: data.reply },
       ]);
-    }, 1000);
+    } catch (err) {
+      setMessages((prev) => [
+        ...prev,
+        { from: 'bot', text: 'Server error. Please try again later.' },
+      ]);
+    } finally {
+      setIsTyping(false);
+    }
   };
-
+  
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isTyping]);

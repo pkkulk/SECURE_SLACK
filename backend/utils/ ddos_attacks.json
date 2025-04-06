@@ -1,0 +1,35 @@
+{
+    "name": "ddos_attacks",
+    "auto": true,
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "responses": [
+      {
+        "messages": [
+          {
+            "type": 0,
+            "lang": "en",
+            "speech": [
+              "A Distributed Denial of Service (DDoS) attack is a malicious attempt to disrupt the normal traffic of a targeted server, service or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic from multiple compromised computer systems.",
+              "These compromised systems are often part of a 'botnet' – a network of computers that have been infected with malware and are controlled by an attacker without the owners' knowledge.",
+              "DDoS attacks can make a website or online service unavailable to its intended users.",
+              "Common types of DDoS attacks include SYN floods, UDP floods, and HTTP floods.",
+              "Mitigation techniques involve traffic filtering, rate limiting, and using content delivery networks (CDNs)."
+            ]
+          }
+        ]
+      }
+    ],
+    "userSays": [
+      { "data": [{ "text": "what is a DDoS attack?" }], "isTemplate": false },
+      { "data": [{ "text": "define DDoS attack" }], "isTemplate": false },
+      { "data": [{ "text": "how does a DDoS attack work?" }], "isTemplate": false },
+      { "data": [{ "text": "what are the types of DDoS attacks?" }], "isTemplate": false },
+      { "data": [{ "text": "how to prevent DDoS attacks?" }], "isTemplate": false },
+      { "data": [{ "text": "what is a botnet?" }], "isTemplate": false },
+      { "data": [{ "text": "impact of DDoS attacks" }], "isTemplate": false },
+      { "data": [{ "text": "DDoS mitigation strategies" }], "isTemplate": false }
+    ]
+  }

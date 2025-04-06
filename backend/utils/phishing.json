@@ -1,0 +1,53 @@
+{
+    "name": "Phishing_Info",
+    "auto": true,
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "responses": [
+      {
+        "messages": [
+          {
+            "type": 0,
+            "lang": "en",
+            "speech": [
+              "Phishing is a type of cyber attack where attackers impersonate legitimate institutions.",
+              "It usually involves tricking users into revealing personal or financial information.",
+              "Most phishing attacks occur through email, but can also come via SMS, phone calls, or fake websites.",
+              "Common signs of phishing include misspelled URLs, urgent or threatening language, and unexpected attachments.",
+              "Phishing emails often create a sense of urgency to trick users into clicking malicious links.",
+              "Some phishing attacks are highly targeted – this is known as spear phishing.",
+              "In spear phishing, attackers research their victims to craft more convincing messages.",
+              "Whaling is a type of phishing targeting high-level executives or public figures.",
+              "Phishing attacks may install malware or ransomware on your device if you click on bad links.",
+              "Using two-factor authentication helps protect you even if your credentials are stolen.",
+              "Never enter sensitive info like passwords or credit cards through a link from an email.",
+              "Hovering over links helps you check where they actually lead before clicking.",
+              "Modern phishing attacks may clone websites to look identical to trusted platforms.",
+              "Always verify the sender’s email domain carefully – attackers often spoof known brands.",
+              "Some attackers use QR codes for phishing, directing you to fake login pages.",
+              "Report suspicious emails to your organization or mail provider’s abuse team.",
+              "Browser extensions and anti-virus software can help detect phishing websites.",
+              "Cybersecurity training reduces the chance of users falling for phishing attempts.",
+              "Email providers use spam filters and machine learning to detect phishing attempts.",
+              "Being skeptical and cautious with any unexpected communication is your best defense."
+            ]
+          }
+        ]
+      }
+    ],
+    "userSays": [
+      { "data": [{ "text": "What is phishing?" }], "isTemplate": false },
+      { "data": [{ "text": "How do phishing attacks work?" }], "isTemplate": false },
+      { "data": [{ "text": "What are common signs of phishing?" }], "isTemplate": false },
+      { "data": [{ "text": "How can I avoid phishing scams?" }], "isTemplate": false },
+      { "data": [{ "text": "Tell me about spear phishing." }], "isTemplate": false },
+      { "data": [{ "text": "What is whaling in cybersecurity?" }], "isTemplate": false },
+      { "data": [{ "text": "Can phishing install malware?" }], "isTemplate": false },
+      { "data": [{ "text": "Is QR code phishing real?" }], "isTemplate": false },
+      { "data": [{ "text": "How to identify fake emails?" }], "isTemplate": false },
+      { "data": [{ "text": "Are phishing websites dangerous?" }], "isTemplate": false }
+    ]
+  }
+  

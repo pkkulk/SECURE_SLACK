@@ -1,0 +1,37 @@
+{
+    "name": "firewall",
+    "auto": true,
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "responses": [
+      {
+        "messages": [
+          {
+            "type": 0,
+            "lang": "en",
+            "speech": [
+              "A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
+              "It acts as a barrier between a trusted internal network and an untrusted external network, such as the Internet.",
+              "Firewalls can be hardware-based, software-based, or a combination of both.",
+              "They work by examining network traffic and blocking or allowing it based on configured rules, often involving source and destination IP addresses, ports, and protocols.",
+              "Firewalls help protect against unauthorized access, malware, and other cyber threats.",
+              "Stateful firewalls keep track of the state of network connections and make decisions based on the context of the traffic.",
+              "Next-generation firewalls (NGFWs) offer more advanced features like intrusion prevention, application control, and deep packet inspection."
+            ]
+          }
+        ]
+      }
+    ],
+    "userSays": [
+      { "data": [{ "text": "what is a firewall?" }], "isTemplate": false },
+      { "data": [{ "text": "define firewall" }], "isTemplate": false },
+      { "data": [{ "text": "how does a firewall work?" }], "isTemplate": false },
+      { "data": [{ "text": "types of firewalls" }], "isTemplate": false },
+      { "data": [{ "text": "purpose of a firewall" }], "isTemplate": false },
+      { "data": [{ "text": "hardware vs software firewall" }], "isTemplate": false },
+      { "data": [{ "text": "next-generation firewall" }], "isTemplate": false },
+      { "data": [{ "text": "firewall rules" }], "isTemplate": false }
+    ]
+  }
