@@ -1,15 +1,23 @@
 import { SessionsClient } from '@google-cloud/dialogflow';
 import { v4 as uuid } from 'uuid';
-import path from 'path';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
 const projectId = process.env.DIALOGFLOW_PROJECT_ID as string;
 
-const sessionClient = new SessionsClient({
-  keyFilename: path.join(__dirname, '../config/google-credentials.json'),
-});
+let sessionClient: SessionsClient;
+
+if (process.env.NODE_ENV === 'production') {
+  // In production (e.g., Vercel), parse the JSON string from env variable
+  const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS!);
+  sessionClient = new SessionsClient({ credentials });
+} else {
+  // In development (local), use the credentials file
+  sessionClient = new SessionsClient({
+    keyFilename: './config/google-credentials.json',
+  });
+}
 
 export const detectIntent = async (message: string): Promise<string> => {
   const sessionId = uuid();
