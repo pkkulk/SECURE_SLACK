@@ -4,7 +4,15 @@ import chatRoutes from "./routes/chatRoutes";
 import connectDB from "./db/connect";
 import cors from "cors";
 const app = express();
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:3000/', // for dev
+  'https://secure-slack-frontend.vercel.app' // your deployed frontend
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true, // if using cookies/auth headers, keep this
+}));
 app.use(express.json());
 
 (async () => {
