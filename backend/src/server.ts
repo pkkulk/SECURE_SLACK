@@ -5,14 +5,21 @@ import connectDB from "./db/connect";
 import cors from "cors";
 const app = express();
 const allowedOrigins = [
-  'http://localhost:3000/', // for dev
+  'http://localhost:3000', // for dev
   'https://secure-slack-frontend.vercel.app' // your deployed frontend
 ];
-
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true, // if using cookies/auth headers, keep this
-}));
+    origin: function (origin, callback) {
+      if (allowedOrigins.includes(origin as string) || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true // Allow cookies if needed
+  })
+);
+app.options('*', cors());
 app.use(express.json());
 
 (async () => {
