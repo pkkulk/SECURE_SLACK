@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-
+import API_BASE_URL from '../styles/config';
 export default function SignUpPage() {
   const router = useRouter();
   const [form, setForm] = useState({
@@ -11,7 +11,6 @@ export default function SignUpPage() {
     password: '',
     confirmPassword: '',
   });
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -25,7 +24,7 @@ export default function SignUpPage() {
     }
   
     try {
-      const res = await fetch('http://localhost:5000/api/auth/signup', {
+      const res = await fetch(`${API_BASE_URL}/api/auth/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,5 +1,23 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/_21a5b1df._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/_3d6ef59b._.js", {
 
+"[project]/src/app/styles/config.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+// src/lib/config.ts
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
+const isDev = ("TURBOPACK compile-time value", "development") === 'development';
+const API_BASE_URL = ("TURBOPACK compile-time truthy", 1) ? 'http://localhost:5000' // 👈 your local backend
+ : ("TURBOPACK unreachable", undefined); // 👈 your deployed backend
+const __TURBOPACK__default__export__ = API_BASE_URL;
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
 "[project]/src/app/components/ChatbotWidget.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -10,14 +28,11 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-const __TURBOPACK__import$2e$meta__ = {
-    get url () {
-        return `file://${__turbopack_context__.P("src/app/components/ChatbotWidget.tsx")}`;
-    }
-};
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$styles$2f$config$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/styles/config.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
+;
 ;
 const ChatbotWidget = ()=>{
     _s();
@@ -31,8 +46,6 @@ const ChatbotWidget = ()=>{
     const [input, setInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [isTyping, setIsTyping] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const bottomRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const API_BASE_URL = __TURBOPACK__import$2e$meta__.env.MODE === 'development' ? __TURBOPACK__import$2e$meta__.env.VITE_API_BASE_URL // localhost (from .env)
-     : 'https://secure-slack-backend.vercel.app'; // deployed backend
     const handleSend = async ()=>{
         if (input.trim() === '') return;
         const userMsg = {
@@ -46,7 +59,7 @@ const ChatbotWidget = ()=>{
         setInput('');
         setIsTyping(true);
         try {
-            const res = await fetch(`${API_BASE_URL}/api/chat/chatbotReply`, {
+            const res = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$styles$2f$config$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]}/api/chat/chatbotReply`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -96,7 +109,7 @@ const ChatbotWidget = ()=>{
                         children: "💬 Secure Slack Bot"
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/ChatbotWidget.tsx",
-                        lineNumber: 58,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -107,7 +120,7 @@ const ChatbotWidget = ()=>{
                                     children: msg.text
                                 }, idx, false, {
                                     fileName: "[project]/src/app/components/ChatbotWidget.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 63,
                                     columnNumber: 15
                                 }, this)),
                             isTyping && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -115,20 +128,20 @@ const ChatbotWidget = ()=>{
                                 children: "Typing..."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/ChatbotWidget.tsx",
-                                lineNumber: 77,
+                                lineNumber: 75,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 ref: bottomRef
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/ChatbotWidget.tsx",
-                                lineNumber: 81,
+                                lineNumber: 79,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/components/ChatbotWidget.tsx",
-                        lineNumber: 63,
+                        lineNumber: 61,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -142,7 +155,7 @@ const ChatbotWidget = ()=>{
                                 className: "flex-grow px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none text-sm"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/ChatbotWidget.tsx",
-                                lineNumber: 86,
+                                lineNumber: 84,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -151,19 +164,19 @@ const ChatbotWidget = ()=>{
                                 children: "Send"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/ChatbotWidget.tsx",
-                                lineNumber: 93,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/components/ChatbotWidget.tsx",
-                        lineNumber: 85,
+                        lineNumber: 83,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/components/ChatbotWidget.tsx",
-                lineNumber: 56,
+                lineNumber: 54,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -172,7 +185,7 @@ const ChatbotWidget = ()=>{
                 children: "💬"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ChatbotWidget.tsx",
-                lineNumber: 104,
+                lineNumber: 102,
                 columnNumber: 7
             }, this)
         ]
@@ -1226,4 +1239,4 @@ if ("TURBOPACK compile-time falsy", 0) {
 }}),
 }]);
 
-//# sourceMappingURL=_21a5b1df._.js.map
+//# sourceMappingURL=_3d6ef59b._.js.map

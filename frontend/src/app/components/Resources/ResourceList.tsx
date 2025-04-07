@@ -17,7 +17,7 @@ export default function ResourceList() {
         <h2 className="text-2xl font-bold mb-4">Downloads</h2>
         <div className="space-y-4">
           <DownloadCard title="Cybersecurity Checklist 2025" downloadUrl="/files/checklist.pdf" />
-          <DownloadCard title="Security Policy Template" downloadUrl="/files/policy-template.pdf" />
+           <DownloadCard title="Security Policy Template" downloadUrl="/files/policy-template.pdf" />
         </div>
       </section>
     </div>

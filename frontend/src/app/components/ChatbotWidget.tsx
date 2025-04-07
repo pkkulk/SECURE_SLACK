@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 
+import API_BASE_URL from '../styles/config';
 const ChatbotWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
@@ -19,7 +20,7 @@ const ChatbotWidget = () => {
     setIsTyping(true);
   
     try {
-      const res = await fetch('http://localhost:5000/api/chat/chatbotReply', {
+      const res = await fetch(`${API_BASE_URL}/api/chat/chatbotReply`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input }),
