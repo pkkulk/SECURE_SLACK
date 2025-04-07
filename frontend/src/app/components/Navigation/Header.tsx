@@ -18,7 +18,7 @@ export default function Header() {
             <Link href="/components/News" className="hover:underline">news</Link>
           </li>
           <li>
-            <Link href="/components/Resources" className="hover:underline">Resoureces</Link>
+            <Link href="/components/Resources" className="hover:underline">Resources</Link>
           </li>
           <li>
             <Link href="/signup" className="hover:underline">Signup</Link>
