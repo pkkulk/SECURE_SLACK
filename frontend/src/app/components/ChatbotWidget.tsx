@@ -32,6 +32,7 @@ const ChatbotWidget = () => {
         { from: 'bot', text: data.reply },
       ]);
     } catch (err) {
+      console.log(err);
       setMessages((prev) => [
         ...prev,
         { from: 'bot', text: 'Server error. Please try again later.' },
