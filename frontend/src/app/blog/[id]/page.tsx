@@ -1,54 +1,38 @@
-// import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
 
-// // Dummy blog data
-// const blogs = [
-//   {
-//     id: "1",
-//     title: "The Rise of AI in Cybersecurity",
-//     content: "AI is transforming how we detect and prevent cyber threats...",
-//     category: "AI",
-//     date: "2025-04-04",
-//   },
-//   {
-//     id: "2",
-//     title: "Why DevOps Matters in 2025",
-//     content: "DevOps enables faster and safer software delivery...",
-//     category: "DevOps",
-//     date: "2025-04-01",
-//   },
-// ];
+import blogs from "@/data/blog"; // Make sure this path is correct
+// import blogs from "@/data/blogs";
+import Image from "next/image";
+export default function BlogPostPage({ params }: { params: { id: string } }) {
+  // const blog = blogs.find((b) => b.id === params.id);
+  const blogId = params.id; // Access after awaitable
+  const blog = blogs.find((b) => b.id === blogId);
 
-// // ✅ Page Component
-// export default function BlogPostPage({
-//   params,
-// }: {
-//   params: { id: string };
-// }) {
-//   const blog = blogs.find((b) => b.id === params.id);
+  if (!blog) {
+    return <div className="p-10 text-center text-lg text-red-500">Blog not found 😞</div>;
+  }
 
-//   if (!blog) return notFound();
+  return (
+    <div className="p-6 max-w-7xl mx-auto">
+      <h1 className="text-5xl font-extrabold mb-6 text-gray-900 leading-tight">
+        {blog.title}
+      </h1>
+      <p className="text-base text-gray-500 mb-10">
+        {blog.date} • Category: {blog.category}
+      </p>
 
-//   return (
-//     <div className="p-6 max-w-3xl mx-auto">
-//       <p className="text-sm text-gray-500">
-//         {blog.date} · {blog.category}
-//       </p>
-//       <h1 className="text-4xl font-bold mt-2">{blog.title}</h1>
-//       <div className="mt-6 text-lg text-gray-700 leading-relaxed">
-//         {blog.content}
-//       </div>
-//     </div>
-//   );
-// }
-
-// // ✅ generateStaticParams for build-time dynamic routing
-// export async function generateStaticParams() {
-//   return blogs.map((blog) => ({
-//     id: blog.id,
-//   }));
-// }
-export default function BlogPostPage(){
-    return(
-        <h1>hello</h1>
-    )
+      {blog.image && (
+        <Image
+          src={blog.image}
+          alt={blog.title}
+          width={800}        // Add width
+          height={600}
+          className="w-1/2 h-64 object-cover rounded-lg mb-8 shadow-md mx-auto"
+        />
+      )}
+      <article className="prose prose-lg">
+      <ReactMarkdown>{blog.content}</ReactMarkdown>
+    </article>
+    </div>
+  );
 }

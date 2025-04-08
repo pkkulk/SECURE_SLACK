@@ -1,34 +1,50 @@
 // components/News/NewsFeed.tsx
 
-import NewsCard from "./NewsCard";
+"use client";
 
-const dummyNews = [
-  {
-    title: "New Cybersecurity Update Released",
-    date: "April 4, 2025",
-    description: "Version 2.0 of our secure communication protocol is now live.",
-  },
-  {
-    title: "Hackathon Winners Announced",
-    date: "April 1, 2025",
-    description: "Team CipherSec won first place for their innovative end-to-end encryption.",
-  },
-  {
-    title: "Secure Slack Reaches 10K Users",
-    date: "March 28, 2025",
-    description: "A milestone celebration for our growing open-source community.",
-  },
-];
+import { useEffect, useState } from "react";
+import NewsCard from "./NewsCard";
+import API_BASE_URL from "@/app/styles/config";
+type NewsItem = {
+  title: string;
+  description: string;
+  url: string;
+  urlToImage: string;
+  publishedAt: string;
+};
 
 export default function NewsFeed() {
+  const [newsList, setNewsList] = useState<NewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const res = await fetch(`${API_BASE_URL}/api/news/cyber`);
+        const data = await res.json();
+        setNewsList(data);
+      } catch (error) {
+        console.error("Failed to fetch news:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
+  if (loading) return <p>Loading news...</p>;
+
   return (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {dummyNews.map((news, index) => (
+      {newsList.map((news, index) => (
         <NewsCard
           key={index}
           title={news.title}
-          date={news.date}
+          date={news.publishedAt}
           description={news.description}
+          image={news.urlToImage}
+          url={news.url}
         />
       ))}
     </div>

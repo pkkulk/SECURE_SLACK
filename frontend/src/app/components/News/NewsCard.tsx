@@ -1,18 +1,27 @@
 // components/News/NewsCard.tsx
 
-interface NewsCardProps {
-    title: string;
-    date: string;
-    description: string;
-  }
-  
-  export default function NewsCard({ title, date, description }: NewsCardProps) {
-    return (
-      <div className="border rounded-xl p-4 shadow-md hover:shadow-lg transition">
-        <h2 className="text-xl font-semibold text-blue-700">{title}</h2>
-        <p className="text-gray-500 text-sm mb-2">{date}</p>
-        <p className="text-gray-700">{description}</p>
+type Props = {
+  title: string;
+  description: string;
+  date: string;
+  url: string;
+  image?: string;
+};
+
+export default function NewsCard({ title, description, date, url, image }: Props) {
+  return (
+    <div className="bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition">
+      {image && (
+        <img src={image} alt={title} className="w-full h-48 object-cover rounded-xl" />
+      )}
+      <h2 className="text-lg font-semibold mt-2">{title}</h2>
+      <p className="text-gray-600 text-sm mt-1">{description}</p>
+      <div className="flex justify-between items-center mt-3">
+        <span className="text-xs text-gray-400">{new Date(date).toLocaleDateString()}</span>
+        <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline text-sm">
+          Read more
+        </a>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}

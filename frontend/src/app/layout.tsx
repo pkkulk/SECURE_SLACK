@@ -4,7 +4,7 @@ import Footer from "./components/Navigation/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import ChatbotWidget from "./components/ChatbotWidget";
 import "./globals.css";
-
+import { AuthProvider } from "./context/AuthContext";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,12 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      > <Header />
+     <body
+  className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased`}
+><AuthProvider>
+      <Header />
         {children}
         <ChatbotWidget/>
-        <Footer/>
+        <Footer/></AuthProvider>
       </body>
     </html>
   );
