@@ -1,6 +1,5 @@
 import Hero from "./components/Home/Hero";
 import AboutSection from "./components/Home/AbooutSection";
-import ServiceCard from "./components/Home/ServiceCard";
 import ServiceOverview from "./components/Home/ServicesOverview";
 import SocialProof from "./components/Home/SocialProof";
 
@@ -10,11 +9,11 @@ export default function Page() {
    
        
       <Hero/>
-      <AboutSection/>
-      <ServiceCard/>
+      <div className="z-20">
+      <AboutSection />
       <ServiceOverview/>
       <SocialProof/>
-      
+      </div>
     </div>
   );
 }

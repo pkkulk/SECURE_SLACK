@@ -1,30 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/components/News": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/components/News",
-      "dataRoute": "/components/News.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/favicon.ico": {
       "initialHeaders": {
         "cache-control": "public, max-age=0, must-revalidate",
@@ -45,6 +21,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/favicon.ico",
       "dataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/components/Resources": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/components/Resources",
+      "dataRoute": "/components/Resources.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -126,30 +126,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/components/Resources": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/components/Resources",
-      "dataRoute": "/components/Resources.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/blog": {
       "experimentalBypassFor": [
         {
@@ -165,6 +141,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/blog",
       "dataRoute": "/blog.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/components/News": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/components/News",
+      "dataRoute": "/components/News.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -252,8 +252,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "056c8933e8b123e07d640b8f435ff43f",
-    "previewModeSigningKey": "1f0af659f5c3b2f618396f68e512042c4e91841d311f63c9d7293ed8d95c3dd1",
-    "previewModeEncryptionKey": "55df134bb44c010d9108811e80616a5ec55954f3cfb178cb13738fce5f409fde"
+    "previewModeId": "c74c0bd4510d9458cf97c16a800aea1f",
+    "previewModeSigningKey": "72a77107d716716dfe507fa401a1040df79b623664b0c1eed8cbf848018ab0b4",
+    "previewModeEncryptionKey": "da2c27a5e3639b05ca03f5fabd7a30ba51b3e2d15884c8bd3563dfb226f62830"
   }
 }
