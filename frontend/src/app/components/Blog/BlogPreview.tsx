@@ -2,25 +2,17 @@
 import Link from 'next/link';
 import { Blog } from '@/types/blog'; // Adjust path if needed
 
-interface BlogPreviewProps {
-  blog: Blog;
-}
-
-// Helper function to format date (optional, you can use libraries like date-fns)
 const formatDate = (dateString: string): string => {
   try {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
+      year: 'numeric', month: 'long', day: 'numeric',
     });
-  } catch (e) {
-    console.log(e);
-    return dateString; // Fallback to original string if date is invalid
-  }
+  } catch (_e) {
+    console.log(_e);
+    return dateString; }
 };
 
-export default function BlogPreview({ blog }: BlogPreviewProps) {
+export default function BlogPreview({ blog }: { blog: Blog }) {
   return (
     <article className="group flex flex-col border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
       <div className="p-5">
@@ -42,8 +34,6 @@ export default function BlogPreview({ blog }: BlogPreviewProps) {
         </p>
       </div>
       <div className="mt-auto p-5 pt-0">
-        {/* Separator */}
-        {/* <hr className="border-gray-200 dark:border-gray-700 my-3" /> */}
         <Link
           href={`/blog/${blog.id}`}
           className="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 group-hover:underline"
