@@ -37,9 +37,9 @@ const resources = [
 
 const ResourceCenterPage = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 text-gray-900">
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 py-6 shadow-lg">
-        <h1 className="text-4xl text-white font-bold text-center drop-shadow-md flex justify-center items-center gap-3">
+    <main className="min-h-screen text-gray-900">
+      <div className="">
+        <h1 className="text-4xl mt-4 text-white font-bold text-center drop-shadow-md flex justify-center items-center gap-3">
           📚 <span>Resource Center</span>
         </h1>
       </div>

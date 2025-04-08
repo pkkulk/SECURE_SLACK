@@ -8,10 +8,10 @@ import React from 'react';
     
     const DownloadCard: React.FC<DownloadCardProps> = ({ title, description, link }) => {
       return (
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 flex flex-col justify-between h-full">
+        <div className=" border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 flex flex-col justify-between h-full">
           <div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
-            <p className="text-gray-600 text-sm">{description}</p>
+            <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+            <p className="text-white text-sm">{description}</p>
           </div>
           <a
             href={link}

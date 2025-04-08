@@ -129,7 +129,7 @@ export default function BlogPostPage(
         )}
 
         {/* Main Content */}
-        <div className="prose prose-lg dark:prose-invert max-w-none prose-indigo
+        <div className="prose prose-lg dark:prose-invert max-w-none prose-indigo text-white
                         prose-headings:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-800 dark:prose-a:text-indigo-400 dark:hover:prose-a:text-indigo-300">
           <ReactMarkdown>{blog.content}</ReactMarkdown>
         </div>

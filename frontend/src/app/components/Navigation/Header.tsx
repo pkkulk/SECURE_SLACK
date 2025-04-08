@@ -10,7 +10,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-gray-800 text-white py-4 px-6 z-30">
+    <header className=" text-white py-4 px-6 z-30">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">🚀 Secure Slack</h1>
 

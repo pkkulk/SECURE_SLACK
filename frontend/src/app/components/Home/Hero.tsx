@@ -1,13 +1,11 @@
 // src/components/Hero.tsx
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+// Removed: useEffect, useState, useCallback
+// Removed: Particles, initParticlesEngine, loadLinksPreset, Container
 import { motion } from "framer-motion";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadLinksPreset } from "@tsparticles/preset-links";
-import type { Container } from "@tsparticles/engine"; // Import type for load callback
 
-// --- Framer Motion Variants (for text content) ---
+// --- Framer Motion Variants (Keep these) ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -23,86 +21,37 @@ const itemVariants = {
 
 // --- Component ---
 export default function Hero() {
-  const [init, setInit] = useState(false);
+  // Removed: init state and useEffect for particles
 
-  // Initialize tsParticles engine
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadLinksPreset(engine); // Load the links preset
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
+  // Removed: particlesLoaded callback
 
-  // Optional: Callback when particles are loaded
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    await console.log("Particles loaded", container);
-  }, []);
+  // Removed: particlesOptions object
 
-  // --- tsParticles Options ---
-  const particlesOptions = {
-    preset: "links", // Use the loaded preset
-    background: {
-      color: {
-        // Choose a background color - perhaps a dark blue or near black?
-        // value: "#030a1a", // Dark blue example
-        value: "#0a192f", // Another dark blue
-      },
-    },
-    particles: {
-      color: {
-        // Choose particle/link color - maybe a lighter blue or cyan?
-        value: "#64ffda", // Cyan example
-      },
-      links: {
-        color: "#8892b0", // Lighter link color example
-        distance: 150,
-        enable: true,
-        opacity: 0.3, // Lower opacity for links
-        width: 1,
-      },
-      move: {
-        enable: true,
-        speed: 0.8, // Slightly slower speed
-      },
-       number: {
-          density: { enable: true, area: 800 },
-          value: 80, // Adjust particle count
-       },
-       opacity: { value: 0.4 }, // Lower particle opacity
-       shape: { type: "circle" },
-       size: { value: { min: 1, max: 3 } },
-    },
-    detectRetina: true,
-  };
-
-  // --- Render ---
-  // Don't render anything until the particles engine is ready
-  if (!init) {
-    // Optional: Render a static background while loading
-    return <section className="text-center py-20 bg-[#0a192f] text-white min-h-[60vh]"></section>; // Placeholder height
-  }
+  // Removed: The loading state return:
+  // if (!init) { ... }
 
   return (
-    // Section container: sets up positioning context and minimum height
-    <section className="relative text-center py-20 text-white overflow-hidden min-h-[60vh] flex items-center justify-center"> {/* Adjust min-height as needed */}
+    // Section container:
+    // - Removed `relative` (no longer needed to contain particles)
+    // - Removed `overflow-hidden` (no longer needed for particles)
+    // - Kept text-center, py-20, text-white, flex, items-center, justify-center, min-h-[60vh]
+    // - You might want to add a transparent background or remove any specific bg color
+    //   if you want the global particle background to show through clearly.
+    <section className="text-center py-20 text-white min-h-[60vh] flex items-center justify-center">
 
-      {/* Particles Component - Background Layer */}
-      <Particles
-        id="tsparticles"
-        options={particlesOptions}
-        particlesLoaded={particlesLoaded} // Optional callback
-        className="absolute inset-0 z-0" // Position behind content
-      />
+      {/* Removed: <Particles ... /> component */}
 
       {/* Content Layer - On Top */}
+      {/* Keep `relative z-10` or similar if needed for internal layout,
+          but it no longer needs to be above the local particles */}
       <motion.div
-        className="relative z-10 max-w-4xl mx-auto px-4" // Ensure content stays above particles & has padding
+        className="relative z-10 max-w-4xl mx-auto px-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.h1
+        {/* ... rest of your Hero content (h1, p, button) remains the same ... */}
+         <motion.h1
           className="text-4xl md:text-5xl font-bold mb-4"
           variants={itemVariants}
         >
@@ -119,7 +68,7 @@ export default function Hero() {
         <motion.div variants={itemVariants}>
            <motion.a
              href="#services"
-             className="inline-block px-6 py-3 bg-white text-blue-800 font-semibold rounded-full shadow-md transition-transform duration-200 ease-out" // Adjusted text color for contrast
+             className="inline-block px-6 py-3 bg-white text-blue-800 font-semibold rounded-full shadow-md transition-transform duration-200 ease-out"
              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
              whileTap={{ scale: 0.95 }}
            >
