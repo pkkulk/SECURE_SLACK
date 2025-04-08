@@ -3,6 +3,10 @@ import authRoutes from "./routes/authRoutes";
 import chatRoutes from "./routes/chatRoutes";
 import connectDB from "./db/connect";
 import cors from "cors";
+import newsRoutes from "./routes/newsRoutes";
+import blogRoutes from "./routes/blogRoutes";
+
+
 const app = express();
 
 app.use(
@@ -23,7 +27,9 @@ app.use(express.json());
 
     app.use("/api/auth", authRoutes);
     app.use("/api/chat",chatRoutes);
+    app.use("/api/news", newsRoutes);
 
+app.use("/api/blogs", blogRoutes);
     app.get("/", (req, res) => {
       res.send("Hello from backend!");
     });
