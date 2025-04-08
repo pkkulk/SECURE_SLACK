@@ -6,7 +6,6 @@ import Particles, { initParticlesEngine } from "@tsparticles/react"; // <-- Add 
 import { loadLinksPreset } from "@tsparticles/preset-links"; // <-- Add this
 import type { Container } from "@tsparticles/engine"; // <-- Add this
 
-import type { Metadata } from "next"; // Keep this if you need static metadata (see note below)
 import Header from "./components/Navigation/Header";
 import Footer from "./components/Navigation/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
