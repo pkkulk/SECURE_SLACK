@@ -1,118 +1,57 @@
+// src/data/blog.ts (or data/blog.ts)
+import { Blog } from '@/types/blog'; // Adjust path if needed
 
-const blogs = [
-    {
-      id: "ai-cybersecurity",
-      title: "The Rise of AI in Cybersecurity",
-      category: "AI",
-      summary: "Learn how AI is shaping the future of digital security.",
-      date: "April 6, 2025",
-      image: "/images/ai-cybersecurity.jpg",
-      content: `
-  ## How AI is Changing the Game
+const blogs: Blog[] = [
+  {
+    id: 'intro-cybersecurity',
+    title: 'Introduction to Cybersecurity Threats',
+    category: 'Cybersecurity Fundamentals',
+    summary: 'Learn about the common types of threats individuals and organizations face online.',
+    date: '2024-08-15',
+    image: '/images/cybersecurity-threats.jpg', // Example image path
+    content: `
+# Understanding Common Threats
 
-  Artificial Intelligence is revolutionizing the cybersecurity landscape by enabling:
-  
-  - Faster threat detection
-  - Smarter incident response
-  - Adaptive learning models
-  
-“The next big cyber war will be fought by machines.” – Security Expert
+Cybersecurity is crucial in today's digital world. Here are some common threats:
 
-Startups are embedding AI into:
+* **Malware:** Malicious software including viruses, ransomware, spyware.
+* **Phishing:** Deceptive attempts to steal sensitive information.
+* **Man-in-the-Middle (MitM) Attacks:** Intercepting communication between two parties.
 
-- Firewalls and IDS/IPS
-- Behavior-based analytics
-- Cloud-native security controls
+Stay vigilant!
+    `,
+  },
+  {
+    id: 'password-security',
+    title: 'Creating Strong & Unique Passwords',
+    category: 'Best Practices',
+    summary: 'Discover why strong passwords matter and how to manage them effectively.',
+    date: '2024-08-10',
+    // No image for this one
+    content: `
+# Password Power
 
-## The Human Element in Cybersecurity
+Weak passwords are a major vulnerability. Follow these tips:
 
-Despite all the technology, humans remain the weakest link. Cybercriminals exploit social engineering and phishing to bypass defenses. Companies must:
+1.  **Length:** Aim for at least 12 characters.
+2.  **Complexity:** Use uppercase, lowercase, numbers, and symbols.
+3.  **Uniqueness:** Don't reuse passwords across different sites.
+4.  **Password Managers:** Consider using one to generate and store complex passwords.
 
-- Educate employees regularly
-- Run phishing simulations
-- Enforce least privilege access
+*Secure your accounts!*
+    `,
+  },
+  // ... more blog posts
+];
 
-## Ethical Concerns
+export default blogs;
 
-- Can AI be trusted to make decisions on behalf of humans?
-- What if it misclassifies benign behavior as malicious?
-- How do we audit and explain black-box algorithms?
+// Helper function to simulate fetching (can be replaced with actual API call)
+export const getBlogById = (id: string): Blog | undefined => {
+    return blogs.find((b) => b.id === id);
+}
 
-Strong governance is essential as we move forward into this AI-augmented future.
-      `,
-    },
-    {
-      id: "devops-2025",
-      title: "Why DevOps Matters in 2025",
-      category: "DevOps",
-      summary: "A deep dive into modern software delivery practices.",
-      date: "April 5, 2025",
-      image: "/images/devops.jpeg",
-      content: `
-  ## DevOps: Still Relevant?
-  
-  Yes, and it's evolving.
-  
-  - Emphasis on automation
-  - Culture of collaboration
-  - Continuous integration and delivery (CI/CD)
-  
-  DevOps empowers teams to ship faster with fewer bugs and more confidence.
-
-
-DevOps isn't just CI/CD pipelines anymore. It’s about:
-
-- Accelerated delivery through automation
-- Cultural collaboration across teams
-- Real-time observability
-- Security baked into the pipeline (DevSecOps)
-
-## What's New in DevOps?
-
-- GitOps practices
-- Kubernetes-native delivery
-- Platform engineering
-
-## Metrics that Matter
-
-- Deployment frequency
-- Change failure rate
-- Mean time to recovery (MTTR)
-
-Modern DevOps fosters a culture of accountability, experimentation, and continuous learning.
-      `,
-    },
-    {
-        id: "3",
-        title: "Cloud Security Trends to Watch",
-        category: "Cloud",
-        summary: "Stay ahead with emerging trends in securing cloud infrastructure.",
-        date: "2025-04-03",
-        image: "/images/cloud-security.jpeg",
-        content: `Zero Trust, multi-factor authentication, and cloud-native security platforms are becoming the new norm in 2025.
-        ## Cloud Security Trends for 2025
-
-As companies shift workloads to the cloud, threat actors follow. Key trends:
-
-- Zero Trust architecture becomes standard
-- MFA and IAM policies are strengthened
-- Encryption at-rest and in-transit enforced
-
-## Cloud-Native Security Tools
-
-- AWS GuardDuty
-- Azure Defender
-- Google Chronicle
-
-## Common Challenges
-
-- Misconfigured storage buckets
-- Weak IAM roles
-- Overexposed secrets
-
-Pro tip: automate security audits and use infrastructure-as-code to enforce standards.
-`,
-      }
-  ];
-  
-  export default blogs;
+export const getAllBlogs = (): Blog[] => {
+    // You might want to sort by date here in a real application
+    return blogs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}

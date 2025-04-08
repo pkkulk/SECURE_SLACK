@@ -2,8 +2,13 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
+// ✅ Define a proper user object type
+interface User {
+  token: string;
+}
+
 interface AuthContextType {
-  user: any;
+  user: User | null;
   login: (token: string) => void;
   logout: () => void;
 }
@@ -11,13 +16,12 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null); // ✅ fixed here
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      // You can decode the token here if needed
-      setUser({ token }); // simple version
+      setUser({ token }); // ✅ still valid
     }
   }, []);
 
