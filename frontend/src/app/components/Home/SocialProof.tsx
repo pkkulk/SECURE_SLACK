@@ -39,15 +39,15 @@ export default function SocialProofSection() {
           className="bg-white p-6 rounded-xl shadow text-left max-w-sm mx-auto"
           variants={staggerItem}
         >
-          <p className="mb-2 text-black">“This platform transformed my freelance business.”</p>
-          <footer className="text-sm text-gray-600">— Alex, Designer</footer>
+          <p className="mb-2 text-black">“This platform is best for cyber security services business.”</p>
+          <footer className="text-sm text-gray-600">Designer</footer>
         </motion.blockquote>
         <motion.blockquote
           className="bg-white p-6 rounded-xl shadow text-left max-w-sm mx-auto"
           variants={staggerItem}
         >
           <p className="mb-2 text-black">“A one-stop place to show off my skills to clients.”</p>
-          <footer className="text-sm text-gray-600">— Priya, Developer</footer>
+          <footer className="text-sm text-gray-600">Developer</footer>
         </motion.blockquote>
       </motion.div>
     </section>
