@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import API_BASE_URL from "../styles/config";
@@ -51,6 +51,8 @@ const handleLogin = async (e: React.FormEvent) => {
         <button type="submit" className="bg-blue-600 text-white py-2 rounded">
           Login
         </button>
+        <div className="text-white hover:text-red-500 w-64 mx-auto pl-10"> <Link href="/signup"> create new Account
+        </Link></div>
       </form>
     </div>
   );

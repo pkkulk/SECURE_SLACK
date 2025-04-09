@@ -47,7 +47,6 @@ export default function Hero() {
 
         <motion.div variants={itemVariants}>
            <motion.a
-            
              className="inline-block px-6 py-3 bg-white text-blue-800 font-semibold rounded-full shadow-md transition-transform duration-200 ease-out"
              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
              whileTap={{ scale: 0.95 }}
