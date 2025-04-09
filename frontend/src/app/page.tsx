@@ -2,6 +2,7 @@ import Hero from "./components/Home/Hero";
 import AboutSection from "./components/Home/AbooutSection";
 import ServiceOverview from "./components/Home/ServicesOverview";
 import SocialProof from "./components/Home/SocialProof";
+import ServiceCard from "./components/Home/ServiceCard";
 
 export default function Page() {
   return (
@@ -11,6 +12,7 @@ export default function Page() {
       <Hero/>
       <div className="z-20">
       <AboutSection />
+      <ServiceCard/>
       <ServiceOverview/>
       <SocialProof/>
       </div>

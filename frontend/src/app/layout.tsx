@@ -23,31 +23,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Note: Exporting static 'metadata' might conflict with '"use client"'.
-// If you need dynamic metadata based on client-side data, manage it differently (e.g., using useEffect).
-// If it's truly static, you might need a separate Server Component layout for metadata
-// and nest this client component layout within it. For now, we'll keep it but be aware.
-/*
-export const metadata: Metadata = {
-  title: "Secure Slack", // Example Title
-  description: "Cybersecurity Platform", // Example Description
-};
-*/
-
-// --- tsParticles Options (Copied from previous example) --- // <-- Add this section
 const particlesOptions = {
   preset: "links",
   background: {
     color: {
-      value: "#0a192f", // Global background color
+      value: "#0a192f",
     },
   },
   particles: {
     color: {
-      value: "#64ffda", // Particle color
+      value: "#64ffda", 
     },
     links: {
-      color: "#8892b0", // Link color
+      color: "#8892b0", 
       distance: 150,
       enable: true,
       opacity: 0.3,
@@ -59,9 +47,9 @@ const particlesOptions = {
     },
     number: {
       density: { enable: true, area: 800 },
-      value: 80, // Adjust particle count
+      value: 80, 
     },
-    opacity: { value: 0.4 }, // Particle opacity
+    opacity: { value: 0.4 }, 
     shape: { type: "circle" },
     size: { value: { min: 1, max: 3 } },
   },
@@ -73,61 +61,52 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [init, setInit] = useState(false); // <-- Add state for particle engine initialization
-
-  // Initialize tsParticles engine // <-- Add useEffect
+  const [init, setInit] = useState(false); 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       console.log("Initializing particles engine...");
-      await loadLinksPreset(engine); // Load the links preset
+      await loadLinksPreset(engine); 
     }).then(() => {
       console.log("Particles engine initialized.");
       setInit(true);
     }).catch((error) => {
         console.error("Particles engine initialization failed:", error);
     });
-  }, []); // Empty dependency array ensures this runs once on mount
-
-  // Optional: Callback when particles are loaded // <-- Add callback
+  }, []); 
   const particlesLoaded = useCallback(async (container: Container | undefined) => {
     console.log("Particles canvas loaded:", container?.id);
-    await Promise.resolve(); // Using await to match async signature if needed later
+    await Promise.resolve(); 
   }, []);
 
   return (
     <html lang="en">
-      {/* Apply font variables and base styling here */}
+     
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 
-        {/* Particle Canvas - Fixed Background */}
-        {/* Render only after the engine is initialized */}
+     
         {init && (
           <Particles
-            id="tsparticles-global" // Unique ID for the particle container
+            id="tsparticles-global" 
             options={particlesOptions}
-            particlesLoaded={particlesLoaded} // Optional callback when canvas is ready
-            // Style for fixed positioning behind all content
+            particlesLoaded={particlesLoaded} 
             style={{
               position: 'fixed',
               top: 0,
               left: 0,
               width: '100%',
               height: '100%',
-              zIndex: -1, // Ensure it's behind everything else
+              zIndex: -1,
             }}
           />
         )}
 
-        {/* Content Wrapper: Positioned above particles and manages layout */}
-        {/* We move the flex container logic here from the body */}
-        <div style={{ position: 'relative', zIndex: 1 }} className="min-h-screen flex flex-col">
-          <AuthProvider> {/* AuthProvider likely doesn't need direct styling */}
+             <div style={{ position: 'relative', zIndex: 1 }} className="min-h-screen flex flex-col">
+          <AuthProvider> 
             <Header />
-            {/* Main content area should grow to push footer down */}
             <main className="flex-grow">
                 {children}
             </main>
-            <ChatbotWidget /> {/* Consider its positioning relative to the footer/content */}
+            <ChatbotWidget /> 
             <Footer />
           </AuthProvider>
         </div>

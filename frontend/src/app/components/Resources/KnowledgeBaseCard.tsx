@@ -1,26 +1,31 @@
 import React from 'react';
 
-    type DownloadCardProps = {
-      title: string;
-      description: string;
-      link: string;
-    };
-    
-    const DownloadCard: React.FC<DownloadCardProps> = ({ title, description, link }) => {
-      return (
-        <div className=" border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 flex flex-col justify-between h-full">
-          <div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
-            <p className="text-gray-600 text-sm">{description}</p>
-          </div>
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-block w-full text-center bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-xl hover:bg-blue-700 transition-colors"
-          >
-            Download
-          </a>
-        </div>
-      );
-    };
+interface KnowledgeBaseCardProps {
+  title: string;
+  description: string;
+  fileUrl: string;
+}
+
+const KnowledgeBaseCard: React.FC<KnowledgeBaseCardProps> = ({
+  title,
+  description,
+  fileUrl,
+}) => {
+  return (
+    <div className="bg-white/70 backdrop-blur-md shadow-lg rounded-2xl p-5 border border-white/30 transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-white/90">
+      <h3 className="text-lg font-bold text-purple-900 mb-2">{title}</h3>
+      <p className="text-sm text-gray-700 mb-4">{description}</p>
+      <p className="text-sm font-semibold text-pink-700">Type: Knowledge Base</p>
+      <a
+        href={fileUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-4 text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition"
+      >
+        View Resource
+      </a>
+    </div>
+  );
+};
+
+export default KnowledgeBaseCard;
