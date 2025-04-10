@@ -58,10 +58,17 @@ cd frontend npm run dev
 cd backend npm run dev
 
 ##5. chatbot you can ask chatbot question sevices ,who, some cyber topic like pentration testing, vulnerability, social engineering
+
 ##6 . news Section gives news related to cyber security 
+
 ##7 . in resouce section added the resources or cyber security tips
+
 ##8 . sign after you data is saved mongo db atlas 
+
 ##9 . Blog section will see blogs posted by members
+
 ##10 . home page includes Services information and so many things
+
 ##11. ui designed with tailwindcss and framer-motion 
+
 team members prathmesh kulkarni shreya yadav vedika thorat
