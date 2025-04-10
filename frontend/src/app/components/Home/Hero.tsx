@@ -18,7 +18,7 @@ const itemVariants = {
 
 export default function Hero() {
   return (
-    <section className="h-screen  flex items-center justify-center text-white px-6">
+    <section className="min-h-[80vh]  flex items-center justify-center text-white px-6">
       <motion.div
         className="text-center max-w-4xl"
         variants={containerVariants}
