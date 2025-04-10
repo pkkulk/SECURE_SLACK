@@ -1,12 +1,8 @@
-// src/components/Hero.tsx
 "use client";
 
-// Removed: useEffect, useState, useCallback
-// Removed: Particles, initParticlesEngine, loadLinksPreset, Container
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-// --- Framer Motion Variants (Keep these) ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -16,46 +12,48 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-// --- Component ---
 export default function Hero() {
-  
   return (
-       <section className="text-center py-20 text-white min-h-[60vh] flex items-center justify-center">
-   <motion.div
-        className="relative z-10 max-w-4xl mx-auto px-4"
+    <section className="h-screen  flex items-center justify-center text-white px-6">
+      <motion.div
+        className="text-center max-w-4xl"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
+        viewport={{ once: true, amount: 0.5 }} 
       >
-          <motion.h1
-          className="text-4xl md:text-5xl font-bold mb-4"
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
           variants={itemVariants}
+      viewport={{ once: false, amount: 0.3 }} 
         >
-          Build Your Professional Presence
+          Empowering Your Digital Safety
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl max-w-2xl mx-auto mb-6"
+      viewport={{ once: false, amount: 0.3 }} 
+          className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-300"
           variants={itemVariants}
         >
-          Join thousands of professionals leveling up their digital impact with our platform.
+          Building trust through advanced threat protection, real-time monitoring, and a commitment to cybersecurity excellence.
         </motion.p>
 
-        <motion.div variants={itemVariants}>
-           <motion.a
-             className="inline-block px-6 py-3 bg-white text-blue-800 font-semibold rounded-full shadow-md transition-transform duration-200 ease-out"
-             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-             whileTap={{ scale: 0.95 }}
-           >
+        <motion.div variants={itemVariants}
+        
+      viewport={{ once: false, amount: 0.3 }} 
+        >
           <Link href="/services">
-  <button >
-    Get Started
-  </button></Link>
-           </motion.a>
+            <motion.button
+              className="px-8 py-3 bg-white text-blue-800 font-semibold rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-200"
+              whileTap={{ scale: 0.95 }}
+            >
+              Get Protected Now
+            </motion.button>
+          </Link>
         </motion.div>
       </motion.div>
     </section>

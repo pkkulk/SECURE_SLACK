@@ -1,12 +1,7 @@
 {
   "version": 4,
   "routes": {
-    "/favicon.ico": {
-      "initialHeaders": {
-        "cache-control": "public, max-age=0, must-revalidate",
-        "content-type": "image/x-icon",
-        "x-next-cache-tags": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
-      },
+    "/components/Resources": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -19,32 +14,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/favicon.ico",
-      "dataRoute": null,
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/components/News": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/components/News",
-      "dataRoute": "/components/News.rsc",
+      "srcRoute": "/components/Resources",
+      "dataRoute": "/components/Resources.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -102,6 +73,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/components/News": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/components/News",
+      "dataRoute": "/components/News.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/services": {
       "experimentalBypassFor": [
         {
@@ -126,7 +121,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/components/Resources": {
+    "/blog": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -139,8 +134,37 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/components/Resources",
-      "dataRoute": "/components/Resources.rsc",
+      "srcRoute": "/blog",
+      "dataRoute": "/blog.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/favicon.ico": {
+      "initialHeaders": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "image/x-icon",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
+      },
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/favicon.ico",
+      "dataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -165,30 +189,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/signup",
       "dataRoute": "/signup.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/blog": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/blog",
-      "dataRoute": "/blog.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -276,8 +276,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "c648a8e00db5e2c65358d7c5b3598c90",
-    "previewModeSigningKey": "bf38ff969b18381ab470ed5e68d673ab8aee06ae54c22b9cde768341208a604b",
-    "previewModeEncryptionKey": "860331b5f6e42c1bb60f9ed4e653b1e4002d93d2dfe0bccca45882c4ca6accc0"
+    "previewModeId": "03026b1762b15ff7dd1c73980f8031e0",
+    "previewModeSigningKey": "a3f3fdaa23383978b6021498daedefff8fb57c769a4eecc97271f89a2d6a0262",
+    "previewModeEncryptionKey": "e31ff26ac9c097961f0a3195c74ded3da2c842cc8288af8c435447151308a22c"
   }
 }

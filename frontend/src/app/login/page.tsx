@@ -30,12 +30,12 @@ const handleLogin = async (e: React.FormEvent) => {
 
   return (
     <div className="max-w-md mx-auto mt-10">
-      <h1 className="text-2xl font-bold mb-4">Login</h1>
+      <h1 className="text-2xl font-bold mb-4 text-white w-32 mx-auto">Login</h1>
       <form onSubmit={handleLogin} className="flex flex-col gap-4">
         <input
           type="email"
           placeholder="Email"
-          className="border p-2 rounded"
+          className="border p-2 rounded border-white text-white"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -43,7 +43,7 @@ const handleLogin = async (e: React.FormEvent) => {
         <input
           type="password"
           placeholder="Password"
-          className="border p-2 rounded"
+          className="border p-2 rounded  border-white text-white"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required

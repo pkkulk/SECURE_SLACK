@@ -7,14 +7,12 @@ import ServiceCard from "./components/Home/ServiceCard";
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen">
-   
-       
-      <Hero/>
+      <Hero />
       <div className="z-20">
-      <AboutSection />
-      <ServiceCard/>
-      <ServiceOverview/>
-      <SocialProof/>
+        <AboutSection />
+        <ServiceCard />
+        <ServiceOverview />
+        <SocialProof />
       </div>
     </div>
   );
