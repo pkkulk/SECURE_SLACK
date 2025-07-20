@@ -40,14 +40,21 @@ export default function SocialProofSection() {
           variants={staggerItem}
         >
           <p className="mb-2 text-black">“This platform is best for cyber security services business.”</p>
-          <footer className="text-sm text-gray-600">Designer</footer>
+          <footer className="text-sm text-gray-600">Prathamesh</footer>
         </motion.blockquote>
         <motion.blockquote
           className="bg-white p-6 rounded-xl shadow text-left max-w-sm mx-auto"
           variants={staggerItem}
         >
           <p className="mb-2 text-black">“A one-stop place to show off my skills to clients.”</p>
-          <footer className="text-sm text-gray-600">Developer</footer>
+          <footer className="text-sm text-gray-600">Shreya</footer>
+        </motion.blockquote>
+        <motion.blockquote
+          className="bg-white p-6 rounded-xl shadow text-left max-w-sm mx-auto"
+          variants={staggerItem}
+        >
+          <p className="mb-2 text-black">“This is a game-changer for my cybersecurity business.”</p>
+          <footer className="text-sm text-gray-600">Vedika</footer>
         </motion.blockquote>
       </motion.div>
     </section>
